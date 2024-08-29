@@ -1,12 +1,13 @@
 
 import './App.css'
+import Hero from "./pages/Hero/Hero"
 
 function App() {
 
 
   return (
     <>
-      <p className="font-bold text-red-900">Nisal Shiranda</p>
+    <Hero />
     </>
   )
 }
