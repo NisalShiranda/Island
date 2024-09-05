@@ -1,5 +1,7 @@
 import "./NavBar.css"
 import { Data } from "./data"
+import TapButton from "./TapButton"
+
 
 function Card(props){
     return (
@@ -12,18 +14,15 @@ function Card(props){
     )
 }
 
-function TapButton ( {children}) {
+function clickHandler(selectedButton){
   return(
-    <>
-   
-      <button>{children}</button>
     
-  </>
-
-
-
+      alert(selectedButton)
+   
   )
 }
+
+
 
 function NavBar() {
   return (
@@ -32,8 +31,10 @@ function NavBar() {
         <Card {...Data[0]} />
         <Card {...Data[1]} />
         <Card {...Data[2]} />
-        <TapButton>Home</TapButton>
-        <TapButton>About</TapButton>
+        <br></br>
+        <TapButton onSelect={() => clickHandler('Home')}>Home</TapButton>
+        <TapButton onSelect={() => clickHandler('About')}>About</TapButton>
+       
         
         
     </>
