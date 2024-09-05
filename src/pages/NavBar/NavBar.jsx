@@ -12,6 +12,19 @@ function Card(props){
     )
 }
 
+function TapButton ( {children}) {
+  return(
+    <>
+    <li>
+      <button>{children}</button>
+    </li>
+  </>
+
+
+
+  )
+}
+
 function NavBar() {
   return (
     <>
@@ -19,6 +32,9 @@ function NavBar() {
         <Card {...Data[0]} />
         <Card {...Data[1]} />
         <Card {...Data[2]} />
+        <TapButton>Home</TapButton>
+        <TapButton>About</TapButton>
+        
         
     </>
   )
